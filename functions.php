@@ -21,3 +21,10 @@ function add_theme_menus() {
 }
 
 add_action('init', 'add_theme_menus');
+
+function theme_scripts() {
+	$theme_version = wp_get_theme()->get('Version');
+
+	wp_enqueue_script('script', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), $theme_version);
+}
+add_action('wp_enqueue_scripts', 'theme_scripts');
