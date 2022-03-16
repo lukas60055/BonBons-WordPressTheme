@@ -304,11 +304,8 @@ p {
 /* Desktop */
 @media screen and (min-width: 768px) {
 	.header-inner {
+		padding: 1.5rem 5rem;
 		align-items: center;
-	}
-
-	.header-title {
-		width: 40%;
 	}
 
 	.nav-toggle {
@@ -317,7 +314,7 @@ p {
 	}
 
 	.header-navigation {
-		width: 50%;
+		width: auto;
 		position: static;
 		top: auto;
 		left: auto;
@@ -328,10 +325,10 @@ p {
 
 	.menu-top {
 		display: flex;
-		justify-content: space-evenly;
 	}
 
 	.menu-top li {
+		margin-right: 4rem;
 		border-bottom: none;
 		visibility: visible;
 		opacity: 1;
