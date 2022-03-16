@@ -206,7 +206,7 @@ h1 {
 
 h2 {
 	color: #666;
-	font-size: 20px;
+	font-size: 2rem;
 	font-size: 1.25rem;
 	font-weight: 400;
 }
@@ -285,10 +285,76 @@ p {
 
 .menu-top li a {
 	display: block;
+	position: relative;
     padding: 1.3rem 0;
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
     color: #3e4040;
-    background: #fff;
+    background-color: #fff;
+}
+
+.menu-top li.current-menu-item > a {
+	color: #6B96DD;
+}
+
+/* Desktop */
+@media screen and (min-width: 768px) {
+	.header-inner {
+		align-items: center;
+	}
+
+	.header-title {
+		width: 40%;
+	}
+
+	.nav-toggle {
+		display: none;
+		opacity: 0;
+	}
+
+	.header-navigation {
+		width: 50%;
+		position: static;
+		top: auto;
+		left: auto;
+		visibility: visible;
+		transform: none;
+		z-index: 0;
+	}
+
+	.menu-top {
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.menu-top li {
+		border-bottom: none;
+		visibility: visible;
+		opacity: 1;
+		transform: none;
+	}
+
+	.menu-top li:first-of-type {
+		border-top: none;
+	}
+
+	.menu-top li a {
+		padding: 0;
+		background-color: transparent;
+	}
+
+	.menu-top li.current-menu-item > a {
+		color: #3e4040;
+	}
+
+	.menu-top li.current-menu-item > a::after {
+		content: "";
+		position: absolute;
+		width: 40%;
+		bottom: -1.2rem;
+		left: 50%;
+		border-bottom: .3rem solid #6B96DD;
+		transform: translateX(-50%);
+	}
 }
