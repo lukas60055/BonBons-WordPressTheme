@@ -17,6 +17,8 @@ Text Domain: 		bonbons
 ----------------------------------------------------------------
 
 	0. 	Normalize CSS
+	1.  Document Setup
+	2.  Typography
 
 ----------------------------------------------------------------------------- */
 
@@ -157,4 +159,59 @@ template {
 }
 [hidden] {
 	display: none;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*	1. Document Setup
+/* -------------------------------------------------------------------------- */
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.site-header::before,
+.site-header::after,
+.site-content::before,
+.site-content::after,
+.site-footer::before,
+.site-footer::after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*	2. Typography
+/* -------------------------------------------------------------------------- */
+body {
+	font-family: helvetica, arial, sans-serif;
+	color: #333;
+	background-color: #ececec;
+}
+
+h1 {
+	font-size: 2.1rem;
+	font-weight: 600;
+}
+
+h2 {
+	color: #666;
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+
+
+p {
+	margin: 0 0 1.5em;
+	padding: 0;
 }
