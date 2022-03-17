@@ -1,4 +1,4 @@
-    <footer>
+    <footer class="site-footer">
         <div class="copyright">
             <?php bloginfo('name'); ?>
         </div>
