@@ -234,8 +234,12 @@ p {
 	padding: 1.5rem 2rem;
 }
 
-.site-title {
+.header-title {
 	color: #111;
+}
+
+.header-title img {
+	max-width: 15rem;
 }
 
 .header-navigation {
@@ -307,6 +311,10 @@ p {
 	.header-inner {
 		padding: 1.5rem 5rem;
 		align-items: center;
+	}
+
+	.header-title img {
+		max-width: 18rem;
 	}
 
 	.nav-toggle {
