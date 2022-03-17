@@ -61,8 +61,22 @@ function theme_setup() {
 add_action('after_setup_theme', 'theme_setup');
 
 
+function lightbox2($content) {
+	global $post;
+	$pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
+	$replacement = '<a$1 data-lightbox="post-image" data-title="ello" href=$2$3.$4$5$6</a>';
+	$content = preg_replace($pattern, $replacement, $content);
+
+	return $content;
+}
+add_filter('the_content', 'lightbox2');
+
+
 function theme_scripts() {
 	$theme_version = wp_get_theme()->get('Version');
+
+	wp_enqueue_style('lightBox-css', get_stylesheet_directory_uri() . '/assets/css/lightBox.css', array(), '2.11.3');
+	wp_enqueue_script('lightBox-js', get_stylesheet_directory_uri() . '/assets/js/lightBox.js', array('jquery'), '2.11.3', true);
 
 	wp_enqueue_script('script', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), $theme_version, true);
 }
