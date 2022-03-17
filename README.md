@@ -6,7 +6,7 @@ The theme was made for the recruitment task.  The theme is prepared for displayi
 ![](https://i.imgur.com/eiD7RE6.png)
 
 ## Starter content
-Initial view of a theme with starter content will only happen for “**fresh sites**” – new installs that have not yet had any posts, pages, widgets, or customizer settings updated. This state can be changed. By changing the value of '**fresh_site**' to '**0**' in the database in the '***-options**' table.
+Initial view of a theme with starter content will only happen for “**fresh sites**” – new installs that have not yet had any posts, pages, widgets, or customizer settings updated. This state can be changed. By changing the value of '**fresh_site**' to '**1**' in the database in the '***-options**' table.
 ### From within WordPress ###
 1. Navigate to **Appearance** > **Customize**.
 2. Click button **Publish**.
