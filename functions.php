@@ -33,7 +33,25 @@ function theme_setup() {
 			'about' => array(
 				'post_type' => 'page',
 				'post_title' => 'Gallery',
-				'post_content' => '',
+				'post_content' => '
+					<!-- wp:gallery {"linkTo":"media"} -->
+					<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"sizeSlug":"large","linkDestination":"media","className":"is-style-default"} -->
+					<figure class="wp-block-image size-large is-style-default"><a href="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-4.jpg"><img src="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-4.jpg" alt=""/></a><figcaption>Opis 1</figcaption></figure>
+					<!-- /wp:image -->
+
+					<!-- wp:image {"sizeSlug":"large","linkDestination":"media","className":"is-style-default"} -->
+					<figure class="wp-block-image size-large is-style-default"><a href="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-3.jpg"><img src="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-3.jpg" alt=""/></a><figcaption>Opis 2</figcaption></figure>
+					<!-- /wp:image -->
+
+					<!-- wp:image {"sizeSlug":"large","linkDestination":"media","className":"is-style-default"} -->
+					<figure class="wp-block-image size-large is-style-default"><a href="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-2.jpg"><img src="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-2.jpg" alt=""/></a><figcaption>Opis 3</figcaption></figure>
+					<!-- /wp:image --></figure>
+					<!-- /wp:gallery -->
+
+					<!-- wp:image {"align":"center","width":515,"height":686,"sizeSlug":"full","linkDestination":"media","className":"is-style-default"} -->
+					<div class="wp-block-image is-style-default"><figure class="aligncenter size-full is-resized"><a href="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-1.jpg"><img src="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-1.jpg" alt="" width="515" height="686"/></a><figcaption>Opis 4</figcaption></figure></div>
+					<!-- /wp:image -->
+				',
 			),
 			'contact',
 		),
