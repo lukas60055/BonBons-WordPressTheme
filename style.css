@@ -21,6 +21,7 @@ Text Domain: 		bonbons
 	2.  Typography
 	3.  Header
 	4.  Main content
+	5.  Galleries
 
 ----------------------------------------------------------------------------- */
 
@@ -401,4 +402,25 @@ p {
 	.entry-content {
 	  max-width: 1240px;
 	}
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*	5. Galleries
+/* -------------------------------------------------------------------------- */
+.wp-block-image img {
+	padding: .5rem;
+	background-color: #fff;
+	box-shadow: 0 0 1.5rem 0 rgba(66, 68, 90, .5);
+	cursor: pointer;
+}
+
+.wp-block-image img:hover {
+	box-shadow: 0 0 1.8rem .1rem rgba(66, 68, 90, .8);
+	transition: box-shadow .3s;
+}
+
+.wp-block-image figcaption {
+	display: none;
+	opacity: 0;
 }
