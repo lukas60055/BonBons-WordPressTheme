@@ -38,6 +38,21 @@ function theme_setup() {
 			'contact',
 		),
 
+		'attachments' => array(
+			'image-cupcakes_1' => array(
+				'file'       => 'assets/images/Cupcakes-1.jpg',
+			),
+			'image-cupcakes_2' => array(
+				'file'       => 'assets/images/Cupcakes-2.jpg',
+			),
+			'image-cupcakes_3'   => array(
+				'file'       => 'assets/images/Cupcakes-3.jpg',
+			),
+			'image-cupcakes_4'   => array(
+				'file'       => 'assets/images/Cupcakes-4.jpg',
+			),
+		),
+
 		'options'     => array(
 			'show_on_front'  => 'page',
 			'page_on_front'  => '{{home}}',
