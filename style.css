@@ -22,6 +22,7 @@ Text Domain: 		bonbons
 	3.  Header
 	4.  Main content
 	5.  Galleries
+	6.  Footer
 
 ----------------------------------------------------------------------------- */
 
@@ -174,6 +175,12 @@ template {
 
 html {
     font-size: 10px;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 a {
@@ -373,11 +380,11 @@ p {
 /*	4. Main content
 /* -------------------------------------------------------------------------- */
 .site-content {
-	margin-top: 50px;
+	margin-top: 5rem;
 }
 
 .site-content article {
-	margin: 0 1rem
+	margin: 0 1rem 3rem;
 }
 
 .entry-content {
@@ -431,4 +438,21 @@ p {
 .wp-block-image figcaption {
 	display: none;
 	opacity: 0;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*	6. Footer
+/* -------------------------------------------------------------------------- */
+footer {
+	height: 6.5rem;
+	margin-top: auto;
+	background-color: #202020;
+}
+
+.copyright {
+	text-align: center;
+	font-size: 1.7rem;
+	color: #fff;
+	line-height: 6.5rem;
 }
