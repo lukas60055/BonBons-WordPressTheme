@@ -25,7 +25,7 @@ function theme_setup() {
 
 	add_theme_support('wp-block-styles');
 
-	add_theme_support( 'responsive-embeds');
+	add_theme_support('responsive-embeds');
 
 	$starter_content = array(
 		'posts'       => array(
@@ -33,7 +33,7 @@ function theme_setup() {
 			'about' => array(
 				'post_type' => 'page',
 				'post_title' => 'Gallery',
-				'post_content' =>'',
+				'post_content' => '',
 			),
 			'contact',
 		),
@@ -44,7 +44,7 @@ function theme_setup() {
 		),
 
 		'nav_menus'   => array(
-			'primary'    => array(
+			'primary'   => array(
 				'name'  => __('Top Menu'),
 				'items' => array(
 					'link_home',
@@ -64,6 +64,6 @@ add_action('after_setup_theme', 'theme_setup');
 function theme_scripts() {
 	$theme_version = wp_get_theme()->get('Version');
 
-	wp_enqueue_script('script', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), $theme_version);
+	wp_enqueue_script('script', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), $theme_version, true);
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');
