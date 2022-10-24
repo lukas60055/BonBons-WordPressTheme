@@ -32,25 +32,31 @@ function theme_setup() {
 			'home',
 			'about' => array(
 				'post_type' => 'page',
-				'post_title' => 'Gallery',
+				'post_title' => 'Galeria',
 				'post_content' => '
-					<!-- wp:gallery {"linkTo":"media"} -->
-					<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"sizeSlug":"large","linkDestination":"media","className":"is-style-default"} -->
-					<figure class="wp-block-image size-large is-style-default"><a href="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-4.jpg"><img src="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-4.jpg" alt=""/></a><figcaption>Opis 1</figcaption></figure>
+					<!-- wp:gallery {"linkTo":"none"} -->
+					<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":45,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+					<figure class="wp-block-image size-large is-style-default"><img src="' . get_theme_file_uri() . '/assets/images/Cupcakes-1.jpg" alt="Cupcakes"/><figcaption>Lorem Ipsum is simply dummy text</figcaption></figure>
 					<!-- /wp:image -->
 
-					<!-- wp:image {"sizeSlug":"large","linkDestination":"media","className":"is-style-default"} -->
-					<figure class="wp-block-image size-large is-style-default"><a href="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-3.jpg"><img src="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-3.jpg" alt=""/></a><figcaption>Opis 2</figcaption></figure>
-					<!-- /wp:image -->
-
-					<!-- wp:image {"sizeSlug":"large","linkDestination":"media","className":"is-style-default"} -->
-					<figure class="wp-block-image size-large is-style-default"><a href="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-2.jpg"><img src="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-2.jpg" alt=""/></a><figcaption>Opis 3</figcaption></figure>
+					<!-- wp:image {"id":47,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+					<figure class="wp-block-image size-large is-style-default"><img src="' . get_theme_file_uri() . '/assets/images/Cupcakes-3.jpg" alt="Cupcakes"/><figcaption>Lorem Ipsum is simply dummy text</figcaption></figure>
 					<!-- /wp:image --></figure>
 					<!-- /wp:gallery -->
 
-					<!-- wp:image {"align":"center","width":515,"height":686,"sizeSlug":"full","linkDestination":"media","className":"is-style-default"} -->
-					<div class="wp-block-image is-style-default"><figure class="aligncenter size-full is-resized"><a href="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-1.jpg"><img src="http://localhost/pive/wp-content/uploads/2022/03/Cupcakes-1.jpg" alt="" width="515" height="686"/></a><figcaption>Opis 4</figcaption></figure></div>
+					<!-- wp:gallery {"linkTo":"none"} -->
+					<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><!-- wp:image {"id":48,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+					<figure class="wp-block-image size-large is-style-default"><img src="' . get_theme_file_uri() . '/assets/images/Cupcakes-4.jpg" alt="Cupcakes"/><figcaption>Lorem Ipsum is simply dummy text</figcaption></figure>
 					<!-- /wp:image -->
+
+					<!-- wp:image {"id":47,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+					<figure class="wp-block-image size-large is-style-default"><img src="' . get_theme_file_uri() . '/assets/images/Cupcakes-3.jpg" alt="Cupcakes"/><figcaption>Lorem Ipsum is simply dummy text</figcaption></figure>
+					<!-- /wp:image -->
+
+					<!-- wp:image {"id":46,"sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+					<figure class="wp-block-image size-large is-style-default"><img src="' . get_theme_file_uri() . '/assets/images/Cupcakes-2.jpg" alt="Cupcakes"/><figcaption>Lorem Ipsum is simply dummy text</figcaption></figure>
+					<!-- /wp:image --></figure>
+					<!-- /wp:gallery -->
 				',
 			),
 			'contact',
@@ -94,23 +100,15 @@ function theme_setup() {
 add_action('after_setup_theme', 'theme_setup');
 
 
-function lightbox2($content) {
-	global $post;
-	$pattern = "/<a(.*?)href=('|\")(.*?).(bmp|gif|jpeg|jpg|png)('|\")(.*?)>/i";
-	$replacement = '<a$1 data-lightbox="post-image" data-title="ello" href=$2$3.$4$5$6</a>';
-	$content = preg_replace($pattern, $replacement, $content);
-
-	return $content;
-}
-add_filter('the_content', 'lightbox2');
-
-
 function theme_scripts() {
 	$theme_version = wp_get_theme()->get('Version');
 
-	wp_enqueue_style('lightBox-css', get_stylesheet_directory_uri() . '/assets/css/lightBox.css', array(), '2.11.3');
-	wp_enqueue_script('lightBox-js', get_stylesheet_directory_uri() . '/assets/js/lightBox.js', array('jquery'), '2.11.3', true);
+	wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/styles.css' , array(), $theme_version);
 
-	wp_enqueue_script('script', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), $theme_version, true);
+	wp_enqueue_script('script', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), $theme_version, true);
+
+	wp_enqueue_style('lightBox-css', get_template_directory_uri() . '/assets/css/lightBox.css', array(), '2.11.3');
+	wp_enqueue_script('lightBox-js', get_template_directory_uri() . '/assets/js/lightBox.js', array('jquery'), '2.11.3', true);
+
 }
 add_action('wp_enqueue_scripts', 'theme_scripts');

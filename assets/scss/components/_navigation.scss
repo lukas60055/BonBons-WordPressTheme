@@ -1,0 +1,97 @@
+@use '../abstracts/' as *;
+
+.nav-toggle {
+	display: block;
+	cursor: pointer;
+
+	@include bp-medium {
+		display: none;
+		opacity: 0;
+	}
+}
+
+.toggle-line {
+	fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.menu-top {
+	padding: 0;
+
+	@include bp-medium {
+		display: flex;
+	}
+
+	& li {
+		list-style: none;
+		border-bottom: 0.2rem solid $color__navigation-line;
+		transform: translateY(-2rem);
+		visibility: hidden;
+		opacity: 0;
+
+		@include bp-medium {
+			margin-right: 4rem;
+			border-bottom: none;
+			transform: none;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		&:first-of-type {
+			border-top: .3rem solid $color__navigation-line;
+
+			@include bp-medium {
+				border-top: none;
+			}
+		}
+
+		& a {
+			position: relative;
+			display: block;
+			padding: 1.3rem 0;
+			font-size: 2rem;
+			font-weight: 700;
+			text-align: center;
+			color: $color__navigation-href;
+			background-color: $color__white;
+
+			@include bp-medium {
+				padding: 0;
+				background-color: transparent;
+			}
+		}
+
+		&.current-menu-item > a {
+			color: $color__navigation-current;
+
+			@include bp-medium {
+				color: $color__navigation-href;
+
+				&::after {
+					content: "";
+					position: absolute;
+					width: 40%;
+					bottom: -1.2rem;
+					left: 50%;
+					border-bottom: .3rem solid $color__navigation-current;
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
+}
+
+.menu-open {
+	& .header-navigation {
+		visibility: visible;
+		z-index: 9999;
+	}
+
+	& .menu-item {
+		transform: translateY(0);
+		visibility: visible;
+		opacity: 1;
+	}
+}

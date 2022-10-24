@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+
+.site-footer {
+	height: 6.5rem;
+	margin-top: auto;
+	background-color: $color__background-footer;
+}
+
+.copyright {
+	font-size: 1.7rem;
+	text-align: center;
+	line-height: 6.5rem;
+	color: $color__text-copyright;
+}

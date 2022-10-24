@@ -1,0 +1,23 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+}
+
+.site- {
+    &header, &content, &footer {
+        &::before, &::after {
+            content: "";
+	        display: table;
+	        table-layout: fixed;
+        }
+    }
+}

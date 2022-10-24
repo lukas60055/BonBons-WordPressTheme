@@ -1,0 +1,49 @@
+@use '../abstracts/' as *;
+
+.site-header {
+	position: relative;
+	background-color: $color__background-header;
+}
+
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	padding: 1.5rem 2rem;
+
+	@include bp-medium {
+		padding: 1.5rem 5rem;
+		align-items: center;
+	}
+}
+
+.site-title {
+	color: $color__text-headerTitle;
+}
+
+.header-title img {
+	max-width: 15rem;
+
+	@include bp-medium {
+		max-width: 18rem;
+	}
+}
+
+.header-navigation {
+	position: absolute;
+	width: 100%;
+    top: 7.1rem;
+	left: 50%;
+    transform: translateX(-50%);
+	visibility: hidden;
+	z-index: -1;
+
+	@include bp-medium {
+		position: static;
+		width: auto;
+		top: auto;
+		left: auto;
+		transform: none;
+		visibility: visible;
+		z-index: 0;
+	}
+}

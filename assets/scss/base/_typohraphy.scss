@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+html {
+    font-size: $font__size--root;
+}
+
+body {
+	font-family: helvetica, arial, sans-serif;
+	color: $color__text-body;
+	background-color: $color__background-body;
+}
+
+h1 {
+	font-size: 2.1rem;
+	font-weight: 600;
+}
+
+h2 {
+	color: $color__text-h2;
+	font-size: 1.7rem;
+	font-weight: 400;
+}
+
+
+p {
+	margin: 0 0 1.5em;
+	padding: 0;
+}

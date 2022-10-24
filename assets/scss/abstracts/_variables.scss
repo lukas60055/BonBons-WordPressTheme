@@ -1,0 +1,44 @@
+// 1. Colors
+// =================================
+
+$color__black       : #000;
+$color__white       : #FFF;
+$color__dark        : #202020;
+$color__grey        : #3e4040;
+$color__light       : #ececec;
+$color__blue        : #6B96DD;
+$color__blueDark    : #42445A;
+
+
+// Colors: Text
+$color__text-body           : lighten($color__black, 20%);
+$color__text-h2             : $color__light;
+$color__text-copyright      : $color__white;
+$color__text-headerTitle    : lighten($color__black, 10%);
+
+// Colors: Backgrounds
+$color__background-body     : $color__light;
+$color__background-header   : darken($color__white, 2%);
+$color__background-footer   : $color__dark;
+
+// Colors: Navigation
+$color__navigation-current  : $color__blue;
+$color__navigation-line     : darken($color__light, 4%);
+$color__navigation-href     : $color__grey;
+
+// Colors: Gallery
+$color__gallery-boxShadow   : $color__blueDark;
+
+
+// 2. Font Size
+// =================================
+$font__size--root   : 10px;
+
+
+// 3. Media Query Sizes
+// =================================
+
+$breakpoint__extra-large    : 1200px;
+$breakpoint__large          : 992px;
+$breakpoint__medium         : 768px;
+$breakpoint__small          : 576px;

@@ -1,0 +1,35 @@
+@use '../abstracts/' as *;
+
+.site-content {
+	margin-top: 5rem;
+
+    & article {
+        margin: 0 1rem 3rem;
+    }
+}
+
+.entry-content {
+	width: 100%;
+	margin: 0 auto;
+	padding: 1rem 1.5rem;
+	font-size: 2.1rem;
+	background-color: $color__white;
+
+    & {
+        @include bp-small {
+            max-width: 540px;
+        }
+
+        @include bp-medium {
+            max-width: 720px;
+        }
+
+        @include bp-large {
+            max-width: 960px;
+        }
+
+        @include bp-extra-large {
+            max-width: 1240px;
+        }
+    }
+}

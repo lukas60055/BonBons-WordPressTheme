@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+@mixin bp-extra-large {
+    @media screen and (min-width: $breakpoint__extra-large) {
+        @content;
+    }
+}
+
+@mixin bp-large {
+    @media screen and (min-width: $breakpoint__large) {
+        @content;
+    }
+}
+
+@mixin bp-medium {
+    @media screen and (min-width: $breakpoint__medium) {
+        @content;
+    }
+}
+
+@mixin bp-small {
+    @media screen and (min-width: $breakpoint__small) {
+        @content;
+    }
+}
