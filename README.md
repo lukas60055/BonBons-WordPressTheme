@@ -31,6 +31,6 @@ Galleries can be created on any page. So that it works properly, just add **gall
 1. Navigate to **Appearance** > **Themes**.
 2. Click '**Add New**' button near '**Themes**' title.
 3. Now '**Add Themes**' page will be loaded with '**Upload Theme**' button hit on it.
-4. Choose '**WordPress-Theme-task.zip**' and click "**Install Now**"
+4. Choose '***.zip**' and click "**Install Now**"
 5. Once uploaded go to **Appearance** > **Themes** and activate it.
 ------------
